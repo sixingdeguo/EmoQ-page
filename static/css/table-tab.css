@@ -1,0 +1,72 @@
+/* --- Tab 样式 --- */
+/*.tabs-wrapper { margin: 20px auto; max-width: 900px; }
+
+.tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tab-button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tab-button.active {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+
+/* ===== Tab 样式 ===== */
+.tab-buttons, .subtab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tab-button, .subtab-button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+
+.tab-button.active, .subtab-button.active {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+/* 内容区 */
+.tab-content, .subtab-content {
+    display: none;
+}
+.tab-content.active, .subtab-content.active {
+    display: block;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; 
+    margin-top: 10px;
+    text-align: center;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+th { 
+    font-weight: bold; 
+}

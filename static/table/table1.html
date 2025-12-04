@@ -1,0 +1,109 @@
+<table class="tg" style="width: 100%;border-collapse: collapse;border: none">
+  <thead>
+    <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
+      <th class="tg-wa1i" rowspan="2" colspan="2">Model</th>
+      <th colspan="5">Emotion</th>
+      <th colspan="4">Response</th>
+    </tr>
+    <tr style="border-bottom: 2px solid black; text-align: left">
+      <th class="tg-yla0">Recall@1</th>
+      <th class="tg-yla0">Recall@3</th>
+      <th class="tg-yla0">Recall@5</th>
+      <th class="tg-yla0">NDCG</th>
+      <th class="tg-yla0">MRR</th>
+      <th class="tg-yla0">B-2</th>
+      <th class="tg-yla0">R-L</th>
+      <th class="tg-yla0">Dist-2</th>
+      <th class="tg-yla0">CIDEr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tg-yla0" rowspan="2">Prompt</td>
+      <td class="tg-yla0">0-shot</td>
+      <td class="tg-cly1">0.31</td>
+      <td class="tg-cly1">0.58</td>
+      <td class="tg-cly1">0.70</td>
+      <td class="tg-cly1">0.85</td>
+      <td class="tg-cly1">0.55</td>
+      <td class="tg-cly1">3.53</td>
+      <td class="tg-cly1">11.48</td>
+      <td class="tg-cly1">40.81</td>
+      <td class="tg-cly1">3.63</td>
+    </tr>
+    <tr style="border-bottom: 0.5px solid black">
+      <td class="tg-yla0">ECoT</td>
+      <td class="tg-cly1">0.14</td>
+      <td class="tg-cly1">0.51</td>
+      <td class="tg-cly1">0.64</td>
+      <td class="tg-cly1">0.80</td>
+      <td class="tg-cly1">0.42</td>
+      <td class="tg-cly1">0.86</td>
+      <td class="tg-cly1">3.57</td>
+      <td class="tg-cly1">14.13</td>
+      <td class="tg-cly1">0.01</td>
+    </tr>
+    <tr>
+      <td class="tg-yla0" rowspan="2">Finetune</td>
+      <td class="tg-yla0">SFT</td>
+      <td class="tg-cly1">0.32</td>
+      <td class="tg-cly1">0.71</td>
+      <td class="tg-cly1">0.82</td>
+      <td class="tg-cly1">0.86</td>
+      <td class="tg-cly1">0.50</td>
+      <td class="tg-cly1">6.27</td>
+      <td class="tg-cly1">21.82</td>
+      <td class="tg-cly1">51.76</td>
+      <td class="tg-cly1">22.06</td>
+    </tr>
+    <tr style="border-bottom: 0.5px solid black">
+      <td class="tg-yla0">FSM</td>
+      <td class="tg-cly1">0.32</td>
+      <td class="tg-cly1">0.68</td>
+      <td class="tg-cly1">0.79</td>
+      <td class="tg-cly1">0.86</td>
+      <td class="tg-cly1">0.51</td>
+      <td class="tg-cly1">6.32</td>
+      <td class="tg-cly1">21.9</td>
+      <td class="tg-cly1">50.35</td>
+      <td class="tg-cly1">21.76</td>
+    </tr>
+    <tr>
+      <td class="tg-yla0" rowspan="3">RL</td>
+      <td class="tg-yla0">EMDP</td>
+      <td class="tg-cly1">0.34</td>
+      <td class="tg-cly1">0.78</td>
+      <td class="tg-cly1">0.86</td>
+      <td class="tg-cly1">0.85</td>
+      <td class="tg-cly1">0.52</td>
+      <td class="tg-cly1">6.66</td>
+      <td class="tg-cly1">20.26</td>
+      <td class="tg-cly1">51.08</td>
+      <td class="tg-cly1">24.78</td>
+    </tr>
+    <tr>
+      <td class="tg-yla0">DQN</td>
+      <td class="tg-cly1">0.33</td>
+      <td class="tg-cly1">0.74</td>
+      <td class="tg-cly1">0.89</td>
+      <td class="tg-cly1">0.90</td>
+      <td class="tg-cly1">0.66</td>
+      <td class="tg-cly1">9.11</td>
+      <td class="tg-cly1">25.35</td>
+      <td class="tg-cly1">54.71</td>
+      <td class="tg-cly1">41.72</td>
+    </tr>
+    <tr style="border-bottom: 2px solid black">
+      <td class="tg-yla0">S-DQN</td>
+      <td class="tg-cly1">0.32</td>
+      <td class="tg-cly1">0.74</td>
+      <td class="tg-cly1">0.89</td>
+      <td class="tg-cly1">0.89</td>
+      <td class="tg-cly1">0.66</td>
+      <td class="tg-cly1">9.02</td>
+      <td class="tg-cly1">25.28</td>
+      <td class="tg-cly1">54.77</td>
+      <td class="tg-cly1">41.13</td>
+    </tr>
+  </tbody>
+</table>
