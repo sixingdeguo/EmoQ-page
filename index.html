@@ -170,7 +170,7 @@
                 <!-- Angry → Calm -->
                 <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
                     <td class="tg-yla0">history</td>
-                    <td class="tg-cly1"  colspan="8"> history history history history history history history history history history history history history history history history history history history history history history history history history history history history history  </td>
+                    <td class="tg-cly1"  colspan="8"> <span class="font-bold text-black">user</span>: (no emotion) Room service.What can I do for you ?<br><span class="font-bold text-black">assistant</span>: (anger) This is room 2012 . Where is my laundry ? You promised to send to me this morning .<br><span class="font-bold text-black">user</span>: (no emotion) Well , let me check for you . I am sorry , sir . They mistook your order as a normal one.Actualty it's an express laundry , is that right ?<br><span class="font-bold text-black">assistant</span>: (no emotion) Yes , I ordered the express service .<br><span class="font-bold text-black">user</span>: (no emotion) Sir , we are terribly sorry for that.We will refund the charge and send your laundry to your room 3 hours later . Is that all right ? </td>
                 </tr>
             </tbody>
             <thead>
@@ -185,62 +185,38 @@
             <tbody>
                 <!-- Angry → Calm -->
                 <tr>
-                    <td style="text-align: left;padding: 8px;border-bottom:1px solid #ccc" rowspan="2">
-                        Angry → Calm
-                    </td>
-
-                    <!-- prompt -->
+                    <td class="tg-yla0">SourceData</td>
+                    <td class="tg-cly1">  No emotion  </td>
+                    <td class="tg-cly1"  colspan="5"> That's fine .  </td>
                     <td style="text-align: center;padding: 8px">
-                        <audio controls style="width: 150px;" src="static/audio/prompt_angry.wav"></audio>
-                    </td>
-
-                    <!-- method A -->
-                    <td style="text-align: center;padding: 8px">
-                        <audio controls style="width: 150px;" src="static/audio/angry2calm_A.wav"></audio>
-                    </td>
-
-                    <!-- method B -->
-                    <td style="text-align: center;padding: 8px">
-                        <audio controls style="width: 150px;" src="static/audio/angry2calm_B.wav"></audio>
-                    </td>
-
-                    <!-- method C -->
-                    <td style="text-align: center;padding: 8px">
-                        <audio controls style="width: 150px;" src="static/audio/angry2calm_C.wav"></audio>
+                        <audio controls style="width: 150px;" src="static/audio/daily/daily_204/SourceData_no emotion_0.wav"></audio>
                     </td>
                 </tr>
-
                 <tr>
-                    <!-- second speaker prompt -->
-                    <td style="text-align: center;padding: 8px;border-bottom:1px solid #ccc">
-                        <audio controls style="width: 150px;" src="static/audio/prompt_angry_female.wav"></audio>
+                    <td class="tg-yla0">FSM</td>
+                    <td class="tg-cly1">  No emotion  </td>
+                    <td class="tg-cly1"  colspan="5"> Yes, thank you.  </td>
+                    <td style="text-align: center;padding: 8px">
+                        <audio controls style="width: 150px;" src="static/audio/daily/daily_204/FSM_no emotion_0.wav"></audio>
                     </td>
-
-                    <td style="text-align: center;padding: 8px;border-bottom:1px solid #ccc">
-                        <audio controls style="width: 150px;" src="static/audio/angry2calm_A_f.wav"></audio>
+                </tr>
+                <tr>
+                    <td class="tg-yla0">CoCT</td>
+                    <td class="tg-cly1">   No emotion  </td>
+                    <td class="tg-cly1"  colspan="5"> That sounds acceptable, thank you for resolving the issue.  </td>
+                    <td style="text-align: center;padding: 8px">
+                        <audio controls style="width: 150px;" src="static/audio/daily/daily_204/Coct_no emotion_0.wav"></audio>
                     </td>
-
-                    <td style="text-align: center;padding: 8px;border-bottom:1px solid #ccc">
-                        <audio controls style="width: 150px;" src="static/audio/angry2calm_B_f.wav"></audio>
-                    </td>
-
-                    <td style="text-align: center;padding: 8px;border-bottom:1px solid #ccc">
-                        <audio controls style="width: 150px;" src="static/audio/angry2calm_C_f.wav"></audio>
+                </tr>
+                <tr style="border-bottom: 2px solid black">
+                    <td class="tg-yla0">EmoQ</td>
+                    <td class="tg-cly1">   No emotion  </td>
+                    <td class="tg-cly1"  colspan="5"> Yes, that's fine.  </td>
+                    <td style="text-align: center;padding: 8px">
+                        <audio controls style="width: 150px;" src="static/audio/daily/daily_204/EmoQ_no emotion_0.wav"></audio>
                     </td>
                 </tr>
             </tbody>
-            <thead>
-                <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
-                    <th style="text-align: center;vertical-align: middle;padding: 8px" rowspan="2">Emotion</th>
-                    <th style="text-align: center;vertical-align: middle;padding: 8px" rowspan="2">Audio prompt</th>
-                    <th style="text-align: center;padding: 8px" colspan="3">Generated audio</th>
-                </tr>
-                <tr style="border-bottom: 2px solid black">
-                    <th style="text-align: center;padding: 8px">Method A</th>
-                    <th style="text-align: center;padding: 8px">Method B</th>
-                    <th style="text-align: center;padding: 8px">Method C</th>
-                </tr>
-            </thead>
         </table>
     </div>
 
