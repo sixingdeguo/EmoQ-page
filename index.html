@@ -162,64 +162,251 @@
             </div>
         </div>
     </div>
-    <div class='tg' style="background-color: #E6E6FA;padding: 20px;border-radius: 5px;max-width: 70%;margin: 20px auto">
-        <table style="width: 100%;border-collapse: collapse;border: none">
-            <thead>
-            </thead>
-            <tbody>
-                <!-- Angry → Calm -->
-                <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
-                    <td class="tg-yla0">history</td>
-                    <td class="tg-cly1"  colspan="8"> <span class="font-bold text-black">user</span>: (no emotion) Room service.What can I do for you ?<br><span class="font-bold text-black">assistant</span>: (anger) This is room 2012 . Where is my laundry ? You promised to send to me this morning .<br><span class="font-bold text-black">user</span>: (no emotion) Well , let me check for you . I am sorry , sir . They mistook your order as a normal one.Actualty it's an express laundry , is that right ?<br><span class="font-bold text-black">assistant</span>: (no emotion) Yes , I ordered the express service .<br><span class="font-bold text-black">user</span>: (no emotion) Sir , we are terribly sorry for that.We will refund the charge and send your laundry to your room 3 hours later . Is that all right ? </td>
-                </tr>
-            </tbody>
-            <thead>
-                <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
-                    <th style="text-align: left;vertical-align: middle;padding: 8px" >Method</th>
-                    <th style="text-align: left;vertical-align: middle;padding: 8px" >Emotion</th>
-                    <th style="text-align: center;vertical-align: middle;padding: 8px" colspan="5">Generated text</th>
-                    <th style="text-align: center;vertical-align: middle;padding: 8px" colspan="2">Generated audio</th>
-                </tr>
-            </thead>
+    <div class="tabs-wrapper";  id="tabs1"; style="background-color: #E6E6FA;padding: 20px;border-radius: 5px;max-width: 70%;margin: 20px auto">
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="case1">DailyDialogue</button>
+            <button class="tab-button" data-tab="case2">Emorynlp</button>
+            <button class="tab-button" data-tab="case3">Meld</button>
+            <button class="tab-button" data-tab="case4">Imeocap</button>
+        </div>
+        <div class="tab-content active" id="case1">
+            <div class="tg" style="width: 100%;border-collapse: collapse;border: none">
+                <table style="width: 100%;border-collapse: collapse;border: none">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <!-- Angry → Calm -->
+                        <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
+                            <td class="tg-yla0">history</td>
+                            <td class="tg-cly1"  colspan="8"> <span class="font-bold text-black">user</span>: (no emotion) Room service.What can I do for you ?<br><span class="font-bold text-black">assistant</span>: (anger) This is room 2012 . Where is my laundry ? You promised to send to me this morning .<br><span class="font-bold text-black">user</span>: (no emotion) Well , let me check for you . I am sorry , sir . They mistook your order as a normal one.Actualty it's an express laundry , is that right ?<br><span class="font-bold text-black">assistant</span>: (no emotion) Yes , I ordered the express service .<br><span class="font-bold text-black">user</span>: (no emotion) Sir , we are terribly sorry for that.We will refund the charge and send your laundry to your room 3 hours later . Is that all right ? </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
+                            <th style="text-align: left;vertical-align: middle;padding: 8px" >Method</th>
+                            <th style="text-align: left;vertical-align: middle;padding: 8px" >Emotion</th>
+                            <th style="text-align: center;vertical-align: middle;padding: 8px" colspan="5">Generated text</th>
+                            <th style="text-align: center;vertical-align: middle;padding: 8px" colspan="2">Generated audio</th>
+                        </tr>
+                    </thead>
 
-            <tbody>
-                <!-- Angry → Calm -->
-                <tr>
-                    <td class="tg-yla0">SourceData</td>
-                    <td class="tg-cly1">  No emotion  </td>
-                    <td class="tg-cly1"  colspan="5"> That's fine .  </td>
-                    <td style="text-align: center;padding: 8px">
-                        <audio controls style="width: 150px;" src="static/audio/daily/daily_204/SourceData_no emotion_0.wav"></audio>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tg-yla0">FSM</td>
-                    <td class="tg-cly1">  No emotion  </td>
-                    <td class="tg-cly1"  colspan="5"> Yes, thank you.  </td>
-                    <td style="text-align: center;padding: 8px">
-                        <audio controls style="width: 150px;" src="static/audio/daily/daily_204/FSM_no emotion_0.wav"></audio>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tg-yla0">CoCT</td>
-                    <td class="tg-cly1">   No emotion  </td>
-                    <td class="tg-cly1"  colspan="5"> That sounds acceptable, thank you for resolving the issue.  </td>
-                    <td style="text-align: center;padding: 8px">
-                        <audio controls style="width: 150px;" src="static/audio/daily/daily_204/Coct_no emotion_0.wav"></audio>
-                    </td>
-                </tr>
-                <tr style="border-bottom: 2px solid black">
-                    <td class="tg-yla0">EmoQ</td>
-                    <td class="tg-cly1">   No emotion  </td>
-                    <td class="tg-cly1"  colspan="5"> Yes, that's fine.  </td>
-                    <td style="text-align: center;padding: 8px">
-                        <audio controls style="width: 150px;" src="static/audio/daily/daily_204/EmoQ_no emotion_0.wav"></audio>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                    <tbody>
+                        <!-- Angry → Calm -->
+                        <tr>
+                            <td class="tg-yla0">SourceData</td>
+                            <td class="tg-cly1">  No emotion  </td>
+                            <td class="tg-cly1"  colspan="5"> That's fine .  </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/daily/daily_204/SourceData_no emotion_0.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yla0">FSM</td>
+                            <td class="tg-cly1">  No emotion  </td>
+                            <td class="tg-cly1"  colspan="5"> Yes, thank you.  </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/daily/daily_204/FSM_no emotion_0.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yla0">CoCT</td>
+                            <td class="tg-cly1">   No emotion  </td>
+                            <td class="tg-cly1"  colspan="5"> That sounds acceptable, thank you for resolving the issue.  </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/daily/daily_204/Coct_No emotion_0.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 2px solid black">
+                            <td class="tg-yla0">EmoQ</td>
+                            <td class="tg-cly1">   No emotion  </td>
+                            <td class="tg-cly1"  colspan="5"> Yes, that's fine.  </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/daily/daily_204/EmoQ_no emotion_0.wav"></audio>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-content" id="case2">
+            <div class="tg" style="width: 100%;border-collapse: collapse;border: none">
+                <table style="width: 100%;border-collapse: collapse;border: none">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <!-- Angry → Calm -->
+                        <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
+                            <td class="tg-yla0">history</td>
+                            <td class="tg-cly1"  colspan="8"> <span class="font-bold text-black">Rachel Green</span>: (Neutral) Ok, ok, Roger was creepy, but he was nothing compared to Pete Carney.<br> <span class="font-bold text-black">Monica Geller</span>: (Neutral) Which one was Pete Carney?<br> <span class="font-bold text-black">Rachel Green</span>: (Mad) Pete the Weeper? Remember that guy who used to cry every time we had sex. "Was it good for you?"<br> <span class="font-bold text-black">Monica Geller</span>: (Mad) Yeah, well, I'll take a little crying any day over Howard-the-"I-win"-guy. "I win! I win!" I went out with the guy for two monthsI didn't get to win once.<br> <span class="font-bold text-black">Rachel Green</span>: (Mad) How did we end up with these jerks? We're good people!<br> <span class="font-bold text-black">Monica Geller</span>: (Neutral) I don't know. Maybe we're some kinda magnets.<br> <span class="font-bold text-black">Phoebe Buffay</span>: (Neutral) I know I am. That's why I can't wear a digital watch.<br> <span class="font-bold text-black">Monica Geller</span>: (Neutral) There's more beer, right?<br> <span class="font-bold text-black">Phoebe Buffay</span>: (Neutral) Oh! You know my friend Abby who shaves her head? She said that if you want to break the bad boyfriend cycle, you can do like a cleansing ritual.<br> <span class="font-bold text-black">Rachel Green</span>: (Neutral) Pheebes, this woman is voluntarily bald.<br> <span class="font-bold text-black">Phoebe Buffay</span>: (Joyful) Yeah. So, we can do it tomorrow night, you guys. It's Valentine's Day. It's perfect.<br> <span class="font-bold text-black">Monica Geller</span>: (Neutral) Ok, well, what kind of ritual?<br> <span class="font-bold text-black">Phoebe Buffay</span>: (Neutral) Ok. We can, um, we can burn the stuff they gave us.<br> <span class="font-bold text-black">Rachel Green</span>: (Neutral) Or?<br> <span class="font-bold text-black">Phoebe Buffay</span>: (Neutral) Or...or we can chant and dance around naked, you know, with sticks. </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
+                            <th style="text-align: left;vertical-align: middle;padding: 8px" >Method</th>
+                            <th style="text-align: left;vertical-align: middle;padding: 8px" >Emotion</th>
+                            <th style="text-align: center;vertical-align: middle;padding: 8px" colspan="5">Generated text</th>
+                            <th style="text-align: center;vertical-align: middle;padding: 8px" colspan="2">Generated audio</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- Angry → Calm -->
+                        <tr>
+                            <td class="tg-yla0">SourceData</td>
+                            <td class="tg-cly1">  Joyful </td>
+                            <td class="tg-cly1"  colspan="5"> Burning's good.  </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/emorynlp/emorynlp_134/SourceData_Joyful_0.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yla0">FSM</td>
+                            <td class="tg-cly1">  Neutral  </td>
+                            <td class="tg-cly1"  colspan="5"> Oh, yeah! </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/emorynlp/emorynlp_134/FSM_Neutral_0.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yla0">CoCT</td>
+                            <td class="tg-cly1">   Mad </td>
+                            <td class="tg-cly1"  colspan="5"> Are you kidding me? Chanting and dancing around naked with sticks? That's not a cleansing ritual, that's a recipe for disaster. </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/emorynlp/emorynlp_134/Coct_Mad_0.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 2px solid black">
+                            <td class="tg-yla0">EmoQ</td>
+                            <td class="tg-cly1">   Peaceful  </td>
+                            <td class="tg-cly1"  colspan="5"> Oh, I like that. </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/emorynlp/emorynlp_134/EmoQ_Peaceful_0.wav"></audio>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-content" id="case3">
+            <div class="tg" style="width: 100%;border-collapse: collapse;border: none">
+                <table style="width: 100%;border-collapse: collapse;border: none">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <!-- Angry → Calm -->
+                        <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
+                            <td class="tg-yla0">history</td>
+                            <td class="tg-cly1"  colspan="8"> <span class="font-bold text-black">Monica</span>
+                            : (neutral) Hey, Joey, could you pass the cheese?<br><span class="font-bold text-black">Joey</span>: (neutral) Listen uh, I'd prefer it if you didn't call me Joey.<br><span class="font-bold text-black">Joey</span>: (neutral) Since I don't know anyone here, I thought it'd be cool to try out a cool work nickname.<br><span class="font-bold text-black">A Waiter</span>: (neutral) Hey, dragon! Here's your tips from Monday and Tuesday.<br><span class="font-bold text-black">Joey</span>: (surprise) There's like-there's like 300 bucks in this one!<br><span class="font-bold text-black">The Waiter</span>: (neutral) Yeah, people get pretty generous around the holidays. And it never hurts to wear tight trousers.<br><span class="font-bold text-black">Monica</span>: (neutral) Could the waiters gather around to hear tonight's specials?<br><span class="font-bold text-black">Monica</span>: (neutral) Okay, first there is a Chilean Sea Bass prepared with a Mango relish on a bag. Why is nobody writing these down?</td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
+                            <th style="text-align: left;vertical-align: middle;padding: 8px" >Method</th>
+                            <th style="text-align: left;vertical-align: middle;padding: 8px" >Emotion</th>
+                            <th style="text-align: center;vertical-align: middle;padding: 8px" colspan="5">Generated text</th>
+                            <th style="text-align: center;vertical-align: middle;padding: 8px" colspan="2">Generated audio</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- Angry → Calm -->
+                        <tr>
+                            <td class="tg-yla0">SourceData</td>
+                            <td class="tg-cly1">  neutral </td>
+                            <td class="tg-cly1"  colspan="5"> Because we can remember them.  </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/meld/meld_129/SourceData_neutral_0.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yla0">FSM</td>
+                            <td class="tg-cly1">  neutral </td>
+                            <td class="tg-cly1"  colspan="5"> We're all just gonna go with the specials board. </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/meld/meld_129/FSM_neutral_0.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yla0">CoCT</td>
+                            <td class="tg-cly1">   Neutral  </td>
+                            <td class="tg-cly1"  colspan="5"> I'll make sure to write it down for you, ma'am. The Chilean Sea Bass is a popular dish, and I'll make sure to emphasize the Mango relish. </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/meld/meld_129/Coct_Neutral_0.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 2px solid black">
+                            <td class="tg-yla0">EmoQ</td>
+                            <td class="tg-cly1">  surprise  </td>
+                            <td class="tg-cly1"  colspan="5"> Oh, I'm sorry, I'm sorry, I'm sorry. </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/meld/meld_129/EmoQ_surprise_0.wav"></audio>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-content" id="case4">
+            <div class="tg" style="width: 100%;border-collapse: collapse;border: none">
+                <table style="width: 100%;border-collapse: collapse;border: none">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <!-- Angry → Calm -->
+                        <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
+                            <td class="tg-yla0">history</td>
+                            <td class="tg-cly1"  colspan="8"> <span class="font-bold text-black">user</span>: (no emotion) Room service.What can I do for you ?<br><span class="font-bold text-black">assistant</span>: (anger) This is room 2012 . Where is my laundry ? You promised to send to me this morning .<br><span class="font-bold text-black">user</span>: (no emotion) Well , let me check for you . I am sorry , sir . They mistook your order as a normal one.Actualty it's an express laundry , is that right ?<br><span class="font-bold text-black">assistant</span>: (no emotion) Yes , I ordered the express service .<br><span class="font-bold text-black">user</span>: (no emotion) Sir , we are terribly sorry for that.We will refund the charge and send your laundry to your room 3 hours later . Is that all right ? </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr style="border-bottom: 2px solid black;border-top: 2px solid black">
+                            <th style="text-align: left;vertical-align: middle;padding: 8px" >Method</th>
+                            <th style="text-align: left;vertical-align: middle;padding: 8px" >Emotion</th>
+                            <th style="text-align: center;vertical-align: middle;padding: 8px" colspan="5">Generated text</th>
+                            <th style="text-align: center;vertical-align: middle;padding: 8px" colspan="2">Generated audio</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- Angry → Calm -->
+                        <tr>
+                            <td class="tg-yla0">SourceData</td>
+                            <td class="tg-cly1">  No emotion  </td>
+                            <td class="tg-cly1"  colspan="5"> That's fine .  </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/daily/daily_204/SourceData_no emotion_0.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yla0">FSM</td>
+                            <td class="tg-cly1">  No emotion  </td>
+                            <td class="tg-cly1"  colspan="5"> Yes, thank you.  </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/daily/daily_204/FSM_no emotion_0.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yla0">CoCT</td>
+                            <td class="tg-cly1">   No emotion  </td>
+                            <td class="tg-cly1"  colspan="5"> That sounds acceptable, thank you for resolving the issue.  </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/daily/daily_204/Coct_No emotion_0.wav"></audio>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 2px solid black">
+                            <td class="tg-yla0">EmoQ</td>
+                            <td class="tg-cly1">   No emotion  </td>
+                            <td class="tg-cly1"  colspan="5"> Yes, that's fine.  </td>
+                            <td style="text-align: center;padding: 8px">
+                                <audio controls style="width: 150px;" src="static/audio/daily/daily_204/EmoQ_no emotion_0.wav"></audio>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>        
     </div>
-
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
