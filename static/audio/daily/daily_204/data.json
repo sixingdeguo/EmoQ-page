@@ -1,6 +1,0 @@
-{"EmoQ": ["no emotion", "Yes, that's fine."], "history": "***History***\nuser: (no emotion) Room service.What can I do for you ?\nassistant: (anger) This is room 2012 . Where is my laundry ? You promised to send to me this morning .\nuser: (no emotion) Well , let me check for you . I am sorry , sir . They mistook your order as a normal one.Actualty it's an express laundry , is that right ?\nassistant: (no emotion) Yes , I ordered the express service .\nuser: (no emotion) Sir , we are terribly sorry for that.We will refund the charge and send your laundry to your room 3 hours later . Is that all right ?\nBased on the conversation ***history*** above, as an assistant, please choose the most appropriate emotion among {no emotion,happiness,surprise,fear,disgust,sadness,anger} to respond to the user.", "SourceData": ["no emotion", "That's fine ."], "Coct": ["No emotion", " That sounds acceptable, thank you for resolving the issue."], "FSM": ["no emotion", "Yes, thank you."]}
-Coct_No emotion_0.wav
-data.json
-EmoQ_no emotion_0.wav
-FSM_no emotion_0.wav
-SourceData_no emotion_0.wav
