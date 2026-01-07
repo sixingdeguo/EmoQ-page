@@ -48,6 +48,15 @@
 
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">-->
     <!--    <style>-->
     <!--        .inline-heading {-->
@@ -82,7 +91,7 @@
                 <div class="text-center">
                     <h1 class="title text-2xl font-bold flex justify-center items-center mb-4">
                         <!-- <img src="static/images/scorpion-icon.png" alt="SCorPion Icon" class="h-6 mr-2"> -->
-                        Value-based self-emotion: steer the streaming text-to-speech emotionally
+                        Self-EmoQ: Plutchik-Guided Value-based Planning to Drive Streaming Emotional TTS
                     </h1>
                     <p class="text-red-500 text-sm mb-4">⚠ This paper contains model-generated content that might be offensive. ⚠ </p >
                     <div class="text-lg mb-4">
@@ -126,8 +135,6 @@
                 <div class="content text-justify text-m">
                     <p>
                         Emotional interaction is increasingly crucial for conversational AI, yet current systems lack a unified mechanism to coordinate emotional expression across text and speech. We propose an emotion-planning dialogue framework that formulates the system’s self-emotion as a reinforcement learning action determined before text generation, enabling consistent emotional control for both language and TTS outputs. The framework is trained using a hybrid reward that combines a correctness indicator with GPT-4o–based evaluative feedback, supporting robust open-domain emotional reasoning. With a streaming-compatible architecture for real-time deployment, our method outperforms strong baselines in emotional alignment, contextual appropriateness, and perceptual naturalness, with human studies confirming its improved coherence and empathy.
-                        
-                        <span class="font-bold text-black">EmoQ</span>
                     </p>
                 </div>
             </div>
@@ -139,7 +146,7 @@
     <div class="container mx-auto max-w-screen-xl">
         <div class="flex justify-center">
             <div class="text-center w-4/5">
-                <h2 class="title text-3xl font-bold mb-3">Results</h2>
+                <h2 class="title text-3xl font-bold mb-3">Cases</h2>
             </div>
         </div>
     </div>
@@ -415,6 +422,21 @@
             </div>
         </div>        
     </div>
+
+    <!-- ===== Tab Demo: two tabs, each with a 2x2 table ===== -->
+
+</section>
+
+
+<!--approach-->
+<section class="section hero  py-16">
+    <div class="container mx-auto max-w-screen-xl">
+        <div class="flex justify-center">
+            <div class="text-center w-4/5">
+                <h2 class="title text-3xl font-bold mb-3">Result</h2>
+            </div>
+        </div>
+    </div>
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
@@ -431,9 +453,6 @@
             </div>
         </div>
     </div>
-
-    <!-- ===== Tab Demo: two tabs, each with a 2x2 table ===== -->
-
     <div class="tabs-wrapper";  id="tabs1"; style="background-color: #E6E6FA;padding: 20px;border-radius: 5px;max-width: 70%;margin: 20px auto">
 
         <!-- 第一层 Tab：Dataset -->
@@ -6193,7 +6212,6 @@
 
     </div>
 </section>
-<!-- ===== Tabs 切换逻辑 ===== --> 
 
 
 <!--approach-->
@@ -6205,36 +6223,30 @@
             </div>
         </div>
     </div>
-</section>
-
-
-<!--overview-->
-<section class="hero is-small">
+    <!--overview-->
     <div class="hero-body">
         <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
+            <div class="columns is-centered ">
                 <div class="column is-four-fifths">
-                    <div class="w-full md:w-1/4 text-left md:pl-0 mb-4 md:mb-0">
+                    <div class="w-full md:w-1/4  md:pl-0 mb-3 md:mb-0">
                         <h2 class="title text-2xl font-bold">Overview</h2>
                     </div>
-                    <div class="column w-4/5 mx-auto">
+                    <div class="column w-3/5 mx-auto">
                         <figure class="image">
-                            <img src="static/images/figure1.png" alt="overview figure">
+                            <img src="static/images/p1_v2.png" alt="overview figure">
                         </figure>
-                        <h2 class="subtitle text-sm has-text-centered">
-                            SCorPion retrieves and ranks the chatting strategy from different
-                            textual corpus by GraphRAG, and produces anthropomorphic response.
-                        </h2>
+                    <h2 class="subtitle is-6 has-text-centered"
+                        style="margin-bottom: 0.4em;">
+                      <strong>Comparison with conventional paradigms.</strong>
+                    </h2>
                     </div>
+                    <p class="content text-justify text-m">
+                        (A) Vanilla streaming LLM-TTS pipeline <span style="color: red;">without</span> emotion consideration.<br>(B) ERC (emotional recognition conversation) combined with emoTTS. Emotion cognition occurs <em>after</em> LLM generation and therefore <span style="color: red;">cannot</span> be utilized by emoTTS in a streaming manner. <br>(C) Our plug-and-play <strong>Self-EmoQ</strong>, which determines self-emotion <strong>prior to</strong> response generation, effectively driving streaming LLM-TTS.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-</section>
-
-
-<!--framework-->
-<section class="hero is-small">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
@@ -6245,18 +6257,285 @@
                     </div>
                     <div class="column">
                         <figure class="image">
-                            <img src="static/images/figure2.png" alt="framework">
+                            <img src="static/images/framework_v3.png" alt="framework">
                         </figure>
-                        <h2 class="subtitle text-sm has-text-centered">
-                            The pipeline starts from the strategy extraction from three types of corpus, then conducts
-                            the indexing and summarization stages of GraphRAG, and finally inference the response.
-                        </h2>
+                    <h2 class="subtitle is-6 has-text-centered"
+                        style="margin-bottom: 0.4em;">
+                      <strong>Framework of Self-EmoQ</strong>
+                    </h2>
+
+                    </div>
+                    <p class="content text-justify text-m">
+                        Framework of Self-EmoQ is post-trained on pretrained LLM, and produce Q-values by averaging output token logprobs. <br>We apply <strong>Plutchik Wheel of Emotions</strong>s to guide reward annotations of multi-turn conversations, and finally update model parameters based the Bellman Equation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+
+                    <div class="w-full md:w-1/4 text-left md:pl-0 mb-3 md:mb-0">
+                        <h2 class="title text-2xl font-bold">Plutchik wheel</h2>
+                    </div>
+                    <div class="columns is-vcentered">
+                        <!-- 左图 -->
+                        <div class="column is-4 has-text-centered">
+                            <figure class="image">
+                                <img src="static/images/Plutchik-wheel.png" alt="Plutchik wheel">
+                        </figure>
+                    </div>
+
+                    <!-- 右文字 -->
+                    <div class="column is-8">
+
+                    <p class="content text-justify text-m">
+                        The Plutchik wheel of Emotion (<strong>Left</strong>) provides a structured theory of emotions, including their categories, opposite and adjacent relationships, and characteristic behavioral functions. This theory enables us to evaluate not only whether a predicted emotion matches a label but also whether it is <em>reasonable</em>, <em>functional</em>, and <em>consistent</em> within the dialogue context.
+                    </p>
+
+                    <p class="content text-justify text-m">
+                       According to Plutchik’s Wheel of Emotion, the emotional expression of an utterance is closely coupled with its underlying behavioral function. Emotional transitions are not arbitrary but tend to follow the topological structure of the emotion wheel, where transitions between adjacent emotions are generally more natural, while transitions between opposite emotions are less plausible.
+                    </p>
+                      </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+
+                    <div class="w-full md:w-1/4 text-left md:pl-0 mb-3 md:mb-0">
+                        <h2 class="title text-2xl font-bold">Prompts</h2>
+                    </div>
+
+                    <!-- <div class="box has-background-light" style="white-space: normal; line-height: 1.6; padding: 1rem;"> -->
+                    <details class="box has-background-light" style="white-space: normal; line-height: 1.6; padding: 1rem;">
+                      <summary style="font-weight: 600;  font-size: 1.2rem;  color: #1e3a8a;  border-left: 4px solid #1e3a8a;  padding-left: 0.5rem;  margin-bottom: 0.6rem;
+                      ">
+                        Self-EmoQ Prompt (click to expand)
+                      </summary>
+
+                      <div>
+                        <strong>Description:</strong> {desc}<br>
+                        <strong>History:</strong> {h}
+                      </div>
+                      <div>
+                        <strong>User's query:</strong> {query}
+                      </div>
+                      <div>
+                        <strong>Please select the most appropriate response emotion from the following options:</strong>
+                      </div>
+                      <div style="margin-left: 1.2em;">
+                        <strong>(1)</strong> {Emo<sub>1</sub>}
+                        <strong>(2)</strong> {Emo<sub>2</sub>}
+                        &hellip;
+                        <strong>(K)</strong> {Emo<sub>K</sub>}
+                      </div>
+
+                      <br>
+
+                      <div>
+                        <strong>Please provide your selection in the format of A through G, your selection is:</strong>
+                      </div>
+                    </details>
+
+                    <details class="box has-background-light" style="white-space: normal; line-height: 1.6; padding: 1rem;">
+                      <summary style="font-weight: 600;  font-size: 1.2rem;  color: #1e3a8a;  border-left: 4px solid #1e3a8a;  padding-left: 0.5rem;  margin-bottom: 0.6rem;
+                      ">
+                        Plutchik Score Prompt (click to expand)
+                      </summary>
+                      <p>
+                        <strong>You are an emotion evaluation module grounded in Plutchik’s Wheel of Emotion.</strong>
+                      </p>
+
+                      <p>
+                        <strong>Plutchik’s theory defines eight emotions:</strong><br>
+                        <em>{Joy, Trust, Fear, Surprise, Sadness, Disgust, Anger, Anticipation}</em>.
+                      </p>
+
+                      <p>
+                        <strong>
+                          Note that these eight emotions are organized in a specific order and exhibit
+                          opposite and adjacent relationships. Specifically, <em>Joy</em> and
+                          <em>Anticipation</em> are also adjacent.
+                        </strong>
+                      </p>
+
+                      <p><strong>There are four pairs of opposite relationships:</strong></p>
+                      <em>(Joy, Sadness)</em>, <em>(Trust, Disgust)</em>, <em>(Fear, Anger)</em>, <em>(Surprise, Anticipation)</em>
+
+                      <p><strong>According to Plutchik’s theory:</strong></p>
+
+                      <p><strong>1. Each emotion is associated with typical behaviors and functions:</strong></p>
+                      <ul>
+                        <li><em>Joy</em>: Courting, mating; Reproduction</li>
+                        <li><em>Trust</em>: Grooming, sharing; Affiliation</li>
+                        <li><em>Fear</em>: Running or flying away; Protection</li>
+                        <li><em>Surprise</em>: Stopping, alerting; Orientation</li>
+                        <li><em>Sadness</em>: Crying for help; Reintegration</li>
+                        <li><em>Disgust</em>: Vomiting, pushing away; Rejection</li>
+                        <li><em>Anger</em>: Biting, hitting; Destruction</li>
+                        <li><em>Anticipation</em>: Examining, mapping; Exploration</li>
+                      </ul>
+
+                      <p><strong>2. Emotional transitions follow structured relationships:</strong></p>
+                      <ol>
+                        <li>a. Transitions between <strong>adjacent</strong> emotions are generally more natural.</li>
+                        <li>b. Transitions between <strong>opposite</strong> emotions are less plausible unless mediated.</li>
+                        <li>c. Emotional responses should not abruptly contradict the user's emotional state.</li>
+                      </ol>
+
+                      <p>
+                        <strong>Your task is to evaluate the system response according to these principles.</strong>
+                      </p>
+
+                      <p>
+                        <strong>History:</strong> {h}<br>
+                        <strong>User's emotion:</strong> {e<sub>u</sub>} &nbsp;
+                        <strong>Query:</strong> {query}<br>
+                        <strong>System's emotion:</strong> {e<sub>s</sub>} &nbsp;
+                        <strong>Response:</strong> {response}
+                      </p>
+
+                      <p>
+                        <strong>
+                          Evaluate the system response using the following criteria.
+                          For each criterion, assign an integer score from 0 to 5
+                          (0 = completely inappropriate, 5 = highly appropriate).
+                        </strong>
+                      </p>
+
+                      <p><strong>1. Emotion Alignment:</strong><br>
+                        To what extent does the response clearly express the target emotional state?
+                      </p>
+
+                      <p><strong>2. Emotion Transition Plausibility:</strong><br>
+                        Is the emotional transition from the user's emotion to the system's target emotion
+                        reasonable according to Plutchik’s emotional structure?
+                      </p>
+
+                      <p><strong>3. Emotion–Function Consistency:</strong><br>
+                        Does the response exhibit the typical behavioral function associated with
+                        the target emotion?
+                      </p>
+
+                      <p><strong>Your response needs to follow the following format:</strong></p>
+
+                      <pre><code>{<br>alignment: int,<br>transition: int,<br>function: int<br>}</code></pre>
+                    </details>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+
+                    <div class="w-full md:w-1/4 text-left md:pl-0 mb-3 md:mb-0">
+                        <h2 class="title text-2xl font-bold">Algorithm</h2>
+                    </div>
+
+                    <details class="box has-background-light" style="white-space: normal; line-height: 1.6; padding: 1rem;">
+                      <summary style="font-weight: 600;  font-size: 1.2rem;  color: #1e3a8a;  border-left: 4px solid #1e3a8a;  padding-left: 0.5rem;  margin-bottom: 0.6rem;
+                      ">
+                        Algorithm: Self-EmoQ (click to expand)
+                      </summary>
+<!--   <div style="
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #1e3a8a;
+    border-left: 4px solid #1e3a8a;
+    padding-left: 0.5rem;
+    margin-bottom: 0.8rem;
+  ">
+    Algorithm: Self-EmoQ
+  </div> -->
+
+  <ol style="list-style: decimal; padding-left: 1.8em;">
+
+    <li>Initialize the batch size \(B\).</li>
+
+    <li>
+      Initialize replay buffer \(\mathcal{B}\), Q-network
+      \(Q_{\theta}(s,a)\), and target Q-network
+      \(\hat{Q}_{\theta^-}(s,a)\) with \(\theta^- \leftarrow \theta\).
+    </li>
+
+    <li>
+      Load pretrained model \(g\); set exploration rate \(\epsilon\),
+      discount factor \(\gamma\), update interval \(C\), and Plutchik weight \(w\).
+    </li>
+
+    <li>
+      <strong>While</strong> not converged:
+      <ol style="list-style: decimal; padding-left: 1.5em;">
+
+        <li>Draw \(B\) samples \(\{(h_t, x_t^u)\}\) from \(\mathcal{B}\).</li>
+
+        <li>
+          <strong>For each</strong> data sample:
+          <ol style="list-style: decimal; padding-left: 1.5em;">
+            <li>Form state \(s_t = (h_t, s_t^u)\).</li>
+            <li>
+              Select emotion \(e_t^s\) using \(\epsilon\)-greedy policy.
+            </li>
+            <li>
+              Obtain response \(x_t^s\) and reward \(r_t\).
+            </li>
+            <li>
+              Update history \(h_{t+1}\) and state \(s_{t+1}\).
+            </li>
+            <li>
+              Store transition \((s_t, a_t, r_t, s_{t+1})\) in \(\mathcal{B}\).
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          Sample batch \(\{(s_i, a_i, r_i, s_i')\}\) from \(\mathcal{B}\).
+        </li>
+
+        <li>
+          Compute TD target:
+          \[
+          y_i = r_i + \gamma \max_{a'} \hat{Q}_{\theta^-}(s_i', a')
+          \]
+        </li>
+
+        <li>
+          Update Q-network by minimizing:
+          \[
+          \mathcal{L}(\theta)
+          = \mathbb{E}_i \bigl[ (Q_\theta(s_i, a_i) - y_i)^2 \bigr].
+          \]
+        </li>
+
+        <li>
+          Every \(C\) steps, update target network
+          \(\theta^- \leftarrow \theta\).
+        </li>
+
+      </ol>
+    </li>
+
+  </ol>
+</details>
+
+
 </section>
+
+
+
+
+
+
 
 <!--    strategy-->
 <section class="hero is-small">
@@ -6287,7 +6566,8 @@
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
                     <h2 class="title text-xl font-bold mb-2 has-text-left">Extracting from strategy-annotated
-                        datasets</h2>
+                        datasets
+                    </h2>
                     <ul class="list-disc pl-5">
                         <li>
                             <h2 class="title text-base  mb-1 has-text-left">ESconv</h2>
@@ -6471,13 +6751,7 @@
                 <h2 class="title text-3xl font-bold mb-3">Conclusion</h2>
             </div>
         </div>
-        <p class="content text-justify text-m">In this paper, we propose a GraphRAG based
-            conversational companion called SCorPion which has strong personality, styled
-            response and can be controlled by explicit control factors. Its capabilities have
-            been verified on experiments of open-domain dialogue, emotional support
-            conversation, stylized generation and other tasks. We finally deploy it on an
-            industrial chatting application with key parameters determined from thorough
-            sensitivity analysis.
+        <p class="content text-justify text-m">We propose {\ModelName}, an emotion-planning dialogue framework that formulates self-emotion as a reinforcement learning action determined prior to response generation. Based on Plutchik's Wheel of Emotion, our theory-driven reward enables long-term emotional planning beyond supervised labels, while a streaming-compatible design allows the planned emotion to consistently guide both text generation and emotional TTS. Experiments show that our method outperforms other baselines on multiple datasets.
         </p>
     </div>
 </section>

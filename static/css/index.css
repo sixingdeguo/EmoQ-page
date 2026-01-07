@@ -132,4 +132,11 @@ body {
 }
 
 
-
+.box {
+      border: 1px solid #dbdbdb;
+      border-radius: 6px;
+    }
+.box-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
