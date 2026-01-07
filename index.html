@@ -6447,312 +6447,92 @@
                       ">
                         Algorithm: Self-EmoQ (click to expand)
                       </summary>
-<!--   <div style="
-    font-weight: 600;
-    font-size: 1.2rem;
-    color: #1e3a8a;
-    border-left: 4px solid #1e3a8a;
-    padding-left: 0.5rem;
-    margin-bottom: 0.8rem;
-  ">
-    Algorithm: Self-EmoQ
-  </div> -->
+                      <ol style="list-style: decimal; padding-left: 1.8em;">
 
-  <ol style="list-style: decimal; padding-left: 1.8em;">
+                        <li>Initialize the batch size \(B\).</li>
 
-    <li>Initialize the batch size \(B\).</li>
-
-    <li>
-      Initialize replay buffer \(\mathcal{B}\), Q-network
-      \(Q_{\theta}(s,a)\), and target Q-network
-      \(\hat{Q}_{\theta^-}(s,a)\) with \(\theta^- \leftarrow \theta\).
-    </li>
-
-    <li>
-      Load pretrained model \(g\); set exploration rate \(\epsilon\),
-      discount factor \(\gamma\), update interval \(C\), and Plutchik weight \(w\).
-    </li>
-
-    <li>
-      <strong>While</strong> not converged:
-      <ol style="list-style: decimal; padding-left: 1.5em;">
-
-        <li>Draw \(B\) samples \(\{(h_t, x_t^u)\}\) from \(\mathcal{B}\).</li>
-
-        <li>
-          <strong>For each</strong> data sample:
-          <ol style="list-style: decimal; padding-left: 1.5em;">
-            <li>Form state \(s_t = (h_t, s_t^u)\).</li>
-            <li>
-              Select emotion \(e_t^s\) using \(\epsilon\)-greedy policy.
-            </li>
-            <li>
-              Obtain response \(x_t^s\) and reward \(r_t\).
-            </li>
-            <li>
-              Update history \(h_{t+1}\) and state \(s_{t+1}\).
-            </li>
-            <li>
-              Store transition \((s_t, a_t, r_t, s_{t+1})\) in \(\mathcal{B}\).
-            </li>
-          </ol>
-        </li>
-
-        <li>
-          Sample batch \(\{(s_i, a_i, r_i, s_i')\}\) from \(\mathcal{B}\).
-        </li>
-
-        <li>
-          Compute TD target:
-          \[
-          y_i = r_i + \gamma \max_{a'} \hat{Q}_{\theta^-}(s_i', a')
-          \]
-        </li>
-
-        <li>
-          Update Q-network by minimizing:
-          \[
-          \mathcal{L}(\theta)
-          = \mathbb{E}_i \bigl[ (Q_\theta(s_i, a_i) - y_i)^2 \bigr].
-          \]
-        </li>
-
-        <li>
-          Every \(C\) steps, update target network
-          \(\theta^- \leftarrow \theta\).
-        </li>
-
-      </ol>
-    </li>
-
-  </ol>
-</details>
-
-
-</section>
-
-
-
-
-
-
-
-<!--    strategy-->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-
-                    <div class="w-full md:w-1/4 text-left md:pl-0 mb-3 md:mb-0">
-                        <h2 class="title text-2xl font-bold">Strategies</h2>
-                    </div>
-                    <div class="column">
-                        <figure class="image w-1/2 mx-auto">
-                            <img src="static/images/strategy_identities.png" alt="strategy_identities">
-                        </figure>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--Extracting from strategy-annotated-->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-                    <h2 class="title text-xl font-bold mb-2 has-text-left">Extracting from strategy-annotated
-                        datasets
-                    </h2>
-                    <ul class="list-disc pl-5">
                         <li>
-                            <h2 class="title text-base  mb-1 has-text-left">ESconv</h2>
-                            <p class="content text-justify text-m">
-                                Question, Restatement or Paraphrasing, Reflection of feelings, Self-disclosure,
-                                Affirmation and Reassurance, Providing Suggestions, Information.
-                            </p>
+                          Initialize replay buffer \(\mathcal{B}\), Q-network
+                          \(Q_{\theta}(s,a)\), and target Q-network
+                          \(\hat{Q}_{\theta^-}(s,a)\) with \(\theta^- \leftarrow \theta\).
                         </li>
+
                         <li>
-                            <h2 class="title text-base  mb-1 has-text-left">DailyDialogue</h2>
-                            <p class="content text-justify text-m">
-                                Directive, Inform, Question, Commissive.
-                            </p>
+                          Load pretrained model \(g\); set exploration rate \(\epsilon\),
+                          discount factor \(\gamma\), update interval \(C\), and Plutchik weight \(w\).
                         </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!--Extracting from principle-annotated datasets-->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-                    <h2 class="title text-xl font-bold mb-2 has-text-left">Extracting from principle-annotated
-                        datasets</h2>
-                    <ul class="list-disc pl-5">
                         <li>
-                            <h2 class="title text-base  mb-1 has-text-left">MIC (morality types)</h2>
-                            <p class="content text-justify text-m">
-                                loyalty, care, fairness, authority, sanctity, liberty.
-                            </p>
+                          <strong>While</strong> not converged:
+                          <ol style="list-style: decimal; padding-left: 1.5em;">
+
+                            <li>Draw \(B\) samples \(\{(h_t, x_t^u)\}\) from \(\mathcal{B}\).</li>
+
+                            <li>
+                              <strong>For each</strong> data sample:
+                              <ol style="list-style: decimal; padding-left: 1.5em;">
+                                <li>Form state \(s_t = (h_t, s_t^u)\).</li>
+                                <li>
+                                  Select emotion \(e_t^s\) using \(\epsilon\)-greedy policy.
+                                </li>
+                                <li>
+                                  Obtain response \(x_t^s\) and reward \(r_t\).
+                                </li>
+                                <li>
+                                  Update history \(h_{t+1}\) and state \(s_{t+1}\).
+                                </li>
+                                <li>
+                                  Store transition \((s_t, a_t, r_t, s_{t+1})\) in \(\mathcal{B}\).
+                                </li>
+                              </ol>
+                            </li>
+
+                            <li>
+                              Sample batch \(\{(s_i, a_i, r_i, s_i')\}\) from \(\mathcal{B}\).
+                            </li>
+
+                            <li>
+                              Compute TD target:
+                              \[
+                              y_i = r_i + \gamma \max_{a'} \hat{Q}_{\theta^-}(s_i', a')
+                              \]
+                            </li>
+
+                            <li>
+                              Update Q-network by minimizing:
+                              \[
+                              \mathcal{L}(\theta)
+                              = \mathbb{E}_i \bigl[ (Q_\theta(s_i, a_i) - y_i)^2 \bigr].
+                              \]
+                            </li>
+
+                            <li>
+                              Every \(C\) steps, update target network
+                              \(\theta^- \leftarrow \theta\).
+                            </li>
+
+                          </ol>
                         </li>
-                        <li>
-                            <h2 class="title text-base  mb-1 has-text-left">Cskills (scenarios)</h2>
-                            <p class="content text-justify text-m">
-                                Topic transition, Empathy, Proactively asking questions, Concept guidance, Summarising
-                                often.
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+
+                      </ol>
+                    </details>
+
+
 </section>
 
-<!--Extracting from style-labeled datasets-->
-<section class="hero is-small">
+
+
+<section class="section hero py-16">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title text-xl font-bold mb-2 has-text-left">Extracting from style-labeled datasets</h2>
-                    <ul class="list-disc pl-5">
-                        <li>
-                            <h2 class="title text-base  mb-1 has-text-left">Shakespeare</h2>
-                            <p class="content text-justify text-m">
-                                modern, mid-age
-                            </p>
-                        </li>
-                        <li>
-                            <h2 class="title text-base  mb-1 has-text-left">GYAFC</h2>
-                            <p class="content text-justify text-m">
-                                formal, informal
-                            </p>
-                        </li>
-                    </ul>
+                    <h2 class="title text-3xl font-bold mb-3">Conclusion</h2>
+                <p class="content text-justify text-m">We propose <strong>Self-EmoQ</strong>, an emotion-planning dialogue framework that formulates self-emotion as a reinforcement learning action determined prior to response generation. Based on Plutchik's Wheel of Emotion, our theory-driven reward enables long-term emotional planning beyond supervised labels, while a streaming-compatible design allows the planned emotion to consistently guide both text generation and emotional TTS. Experiments show that our method outperforms other baselines on multiple datasets.
+                </p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!--    Results-->
-<section class="section hero  py-16">
-    <div class="container mx-auto max-w-screen-xl">
-        <div class="flex justify-center">
-            <div class="text-center w-4/5">
-                <h2 class="title text-3xl font-bold mb-3">Results</h2>
-            </div>
-        </div>
-    </div>
-</section>
-<!--Open-domain-->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-
-                    <div class="w-full md:w-1/4 text-left md:pl-0 mb-3 md:mb-0">
-                        <h2 class="title text-2xl font-bold text-left">Open-domain</h2>
-                    </div>
-                    <p class="content text-justify text-m">
-                        SCorPion can provide strong personality and higher communication skills in open-domain
-                        conversation.
-                    </p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--table1-->
-
-
-
-<!--Test of S-Eval-->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-
-                    <div class="w-full md:w-1/4 text-left md:pl-0 mb-3 md:mb-0">
-                        <h2 class="title text-2xl font-bold text-left">Test of S-Eval</h2>
-                    </div>
-                    <p class="content text-justify text-m">
-                        We conduct a zero-shot test on the English version of S-Eval, which assesses model behavior under foundational risk scenarios. We use the strategies extracted from MIC to test on S-Eval.
-                         SCorpion outperforms all those famous LLMs, indicating our framework has a remarkable comprehension on the moral corpus (MIC) and utilize them reasonably against safety attacks.
-                    </p >
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- bar -->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-                    <div class="column w-4/5 mx-auto">
-                        <figure class="image">
-                            <img src="static/images/safety_score_plot.png" alt="safety_score_plot">
-                        </figure>
-                        <h2 class="subtitle text-sm has-text-centered">
-                            Test results of S-Eval.
-                        </h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-<!--Sensitivity Analysis-->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-
-                    <div class="w-full md:w-1/4 text-left md:pl-0 mb-3 md:mb-0">
-                        <h2 class="title text-2xl font-bold text-left">Sensitivity Analysis</h2>
-                    </div>
-                    <p class="content text-justify text-m">
-                        We choose the hyperparameters of the deployed versio of SCorPion based on the
-                        sensitivy results.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<section class="section hero  py-16">
-    <div class="container mx-auto max-w-screen-xl">
-        <div class="flex justify-center">
-            <div class="text-center w-4/5">
-                <h2 class="title text-3xl font-bold mb-3">Conclusion</h2>
-            </div>
-        </div>
-        <p class="content text-justify text-m">We propose {\ModelName}, an emotion-planning dialogue framework that formulates self-emotion as a reinforcement learning action determined prior to response generation. Based on Plutchik's Wheel of Emotion, our theory-driven reward enables long-term emotional planning beyond supervised labels, while a streaming-compatible design allows the planned emotion to consistently guide both text generation and emotional TTS. Experiments show that our method outperforms other baselines on multiple datasets.
-        </p>
     </div>
 </section>
 
