@@ -140,3 +140,12 @@ body {
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
+.param-label {
+  font-size: 1rem;          /* 或直接用 1em */
+  font-weight: 600;
+  color: #444;
+  margin-right: 0.4rem;
+
+  display: inline-flex;
+  align-items: center;     /* 🔑 垂直居中 */
+}
