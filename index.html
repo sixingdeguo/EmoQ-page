@@ -38,14 +38,14 @@
     <link rel="stylesheet" href="static/css/index.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
     <script defer src="static/js/fontawesome.all.min.js"></script>
     <script src="static/js/bulma-carousel.min.js"></script>
     <script src="static/js/bulma-slider.min.js"></script>
     <script src="static/js/index.js"></script>
     <script src="static/js/table-tab.js" defer></script>
-
-
+    <script src="static/js/table_tts.js" defer></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -7345,7 +7345,7 @@
     <div class="container mx-auto max-w-screen-xl">
         <div class="flex justify-center">
             <div class="text-center w-4/5">
-                <h2 class="title text-3xl font-bold mb-3">Cases</h2>
+                <h2 class="title text-3xl font-bold mb-3">TTS</h2>
             </div>
         </div>
     </div>
@@ -7355,18 +7355,35 @@
                 <div class="column is-four-fifths">
 
                     <div class="w-full md:w-1/4 text-left md:pl-0 mb-3 md:mb-0">
-                        <h2 class="title text-2xl font-bold text-left">TTS Case</h2>
+                        <h2 class="title text-2xl font-bold text-left">TTS Metrics</h2>
+                    </div>
+                    <div class="tabs-wrapper" style="background-color: #E6E6FA;padding: 20px;border-radius: 5px;margin: 20px auto">
+                    
+                        <table class="tg" style="width: 100%;border-collapse: collapse;border: none">
+                          <colgroup>
+                            <col style="width: 180px;">
+                            <col><col><col><col><col><col><col><col><col>
+                          </colgroup>
+                            <table border="1">
+                              <thead id="table-header"></thead>
+                              <tbody id="table-body"></tbody>
+                            </table>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+    </div>
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">    
-                    <div class="tabs-wrapper";  id="tabs1"; style="background-color: #E6E6FA;padding: 20px;border-radius: 5px;margin: 20px auto">
+                <div class="column is-four-fifths">
+
+                    <div class="w-full md:w-1/4 text-left md:pl-0 mb-3 md:mb-0">
+                        <h2 class="title text-2xl font-bold text-left">TTS Case</h2>
+                    </div>  
+                    <div class="tabs-wrapper";  id="tabs_tts"; style="background-color: #E6E6FA;padding: 20px;border-radius: 5px;margin: 20px auto">
                         <div class="tab-buttons">
                             <button class="tab-button active" data-tab="case1">DailyDialogue</button>
                             <button class="tab-button" data-tab="case2">Emorynlp</button>
