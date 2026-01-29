@@ -7370,6 +7370,19 @@
                             </table>
                         </table>
                     </div>
+
+                    <p class="content text-justify text-m">
+                        We evaluate the quality of the generated speech using 
+                        <a href="https://arxiv.org/abs/2401.16812" target="_blank" rel="noopener noreferre" style="font-weight: bold; color: #1a73e8;">
+                        SpeechBERTScore
+                        </a> (BERT) and 
+                        <a href="https://cir.nii.ac.jp/crid/1574231874837257984" target="_blank" rel="noopener noreferrer" style="font-weight: bold; color: #1a73e8;">
+                        PESQ
+                        </a>.
+                        SpeechBERTScore computes token-level similarity between the generated speech and the reference utterance in a shared embedding space, enabling reference-aware evaluation of semantic consistency while being robust to surface-level variations in acoustic realization.
+                        PESQ is a reference-aware objective metric to evaluate the perceptual speech quality. It assumes the generated and reference speech signals are time-aligned. 
+                        As shown in the results, our method consistently outperforms the baselines across both metrics, indicating superior performance in terms of semantic preservation and perceptual speech quality.
+                    </p>
                 </div>
             </div>
         </div>
