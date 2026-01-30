@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const metricMap = {
-    "SpeechBERTScore": "BERTScore",
+    "SpeechBERTScore": "BERT",
     "PESQ": "PESQ",
   };
 
