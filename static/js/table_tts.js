@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const metricMap = {
-    "SpeechBERTScore": "BERT",
+    "SpeechBERTScore": "SBERTScore",
     "PESQ": "PESQ",
   };
 
@@ -26,10 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const datasets = [...new Set(data.map(r => r.dataset))];
       const metrics = ["SpeechBERTScore", "PESQ"];
-      let methods = [...new Set(data.map(r => r.method))];
+      // let methods = [...new Set(data.map(r => r.method))];
+      const methods = ["FSM","Coct","Self-EmoQ"];
 
-      // 不显示 SourceData
-      methods = methods.filter(m => m !== "SourceData");
+      // // 不显示 SourceData
+      // methods = methods.filter(m => m !== "SourceData");
 
       // 1️⃣ 表头第一行（dataset）
       const tr1 = document.createElement("tr");
@@ -55,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       // 4️⃣ tbody
+
       methods.forEach((method, idx) => {
         const tr = document.createElement("tr");
         const isLast = idx === methods.length - 1;
